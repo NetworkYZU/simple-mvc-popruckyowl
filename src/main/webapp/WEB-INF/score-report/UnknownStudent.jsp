@@ -4,6 +4,7 @@
     Author     : lendle
 --%>
 
+<%@page import="lendle.courses.network.simplemvc.Student"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +13,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>你誰?你瘋子~~</h1>
     </body>
 </html>

@@ -17,6 +17,6 @@
             BankCustomer customer=(BankCustomer)request.getAttribute("customer");
         %>
         <h1>Hello, <%=customer.getFirstName()%></h1>
-        繼續存款！
+        窮逼繼續存款！
     </body>
 </html>

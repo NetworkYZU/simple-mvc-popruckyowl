@@ -31,19 +31,19 @@ public class ShowScore extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String id=request.getParameter("id");
-        BankCustomer customer=BankCustomer.getCustomer(id);
+        Student student=Student.getStudent(id);
         String address=null;
-        if(customer==null){
+        if(student==null){
             address="/WEB-INF/score-report/UnknownStudent.jsp";
-        }else if(customer.getBalance()<0){
+        }else if(student.getScore()<50){
             address="/WEB-INF/score-report/LowScore.jsp";
-            request.setAttribute("customer", customer);
-        }else if(customer.getBalance()>10000){
+            request.setAttribute("student", student);
+        }else if(student.getScore()>70){
             address="/WEB-INF/score-report/HighScore.jsp";
-            request.setAttribute("customer", customer);
+            request.setAttribute("student", student);
         }else{
             address="/WEB-INF/score-report/NormalScore.jsp";
-            request.setAttribute("customer", customer);
+            request.setAttribute("student", student);
         }
         request.getRequestDispatcher(address).forward(request, response);
     }

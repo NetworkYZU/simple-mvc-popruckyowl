@@ -4,6 +4,7 @@
     Author     : lendle
 --%>
 
+<%@page import="lendle.courses.network.simplemvc.Student"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +13,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <%
+            Student student=(Student)request.getAttribute("student");
+        %>
+        <h1>Hello, <%=student.getName()%></h1>
+        好課值得一修再修！加入我吧
     </body>
 </html>
